@@ -1,0 +1,165 @@
+/* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* DARK THEME CHANGE: Deep dark background */
+    background: #121212; 
+    /* DARK THEME CHANGE: Default text color is now light */
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Weather Card - Dark Glassmorphism */
+.weather-card {
+    /* DARK THEME CHANGE: Using dark semi-transparent background instead of white */
+    background: rgba(30, 30, 30, 0.75);
+    backdrop-filter: blur(15px); /* Increased blur slightly for better effect */
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border-radius: 1rem;
+    padding: 1.5rem;
+    /* DARK THEME CHANGE: Stronger shadow for depth */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    /* DARK THEME CHANGE: Subtle light border to define edges */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #ffffff; /* Pure white title */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    /* DARK THEME CHANGE: Darker search container */
+    background: rgba(60, 60, 60, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    /* DARK THEME CHANGE: Input text must be white */
+    color: #ffffff;
+}
+
+/* Style the placeholder text (the "Enter city name...") */
+::placeholder {
+    color: #a0a0a0;
+}
+
+.search-btn {
+    padding: 0.75rem 1rem;
+    /* Kept the blue accent color, it pops well on dark */
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #1e40af;
+}
+
+/* Weather Data Styles */
+.loading {
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.error {
+    /* DARK THEME CHANGE: Adjusted red error box for dark mode */
+    background: rgba(220, 38, 38, 0.2);
+    border: 1px solid rgba(220, 38, 38, 0.4);
+    color: #fca5a5; /* Lighter red text */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.weather-data h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+#country, #description {
+    text-align: center;
+    color: #b0b0b0; /* Slightly muted gray for secondary info */
+    text-transform: capitalize;
+}
+
+.temp-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.temp-icon img {
+    width: 5rem;
+    height: 5rem;
+    /* Optional: adds a subtle glow to weather icons */
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+}
+
+.temp-icon p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    color: #ffffff;
+}
+
+.weather-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    /* DARK THEME CHANGE: Darker inner container */
+    background: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.label {
+    font-weight: 600;
+    color: #a0a0a0; /* Muted labels */
+    font-size: 0.9rem;
+}
+
+.weather-stats p:not(.label) {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    /* DARK THEME CHANGE: Lighter footer text */
+    color: #888888;
+}
